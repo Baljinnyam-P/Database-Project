@@ -1,0 +1,150 @@
+
+
+.form-container {
+    opacity: 90%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form h2 {
+    text-align: center;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+select {
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+.checkbox-container {
+    display: flex;
+    align-items: center; /* This will vertically center align items */
+    margin-top: 10px;
+}
+
+.checkbox-container label {
+    margin-left: 5px;
+}
+
+#client-fields {
+    display: none; /* Initially hidden */
+}
+
+.role-container {
+    display: flex;
+    align-items: center; /* This will vertically center align items */
+    margin-top: 10px;
+}
+
+.role-container label {
+    margin-left: 5px;
+}
+select{
+    margin-left: 20px;
+}
+
+
+
+
+
+.form-container {
+    /* ... other styles ... */
+    max-width: 500px; /* Adjust the width as needed */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style for each form row */
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Style for each label in the form row */
+.form-row label {
+    flex: 0 0 100px; /* Adjust the width as needed */
+    margin-right: 5px;
+}
+
+/* Style for each input in the form row */
+.form-row input[type="text"],
+.form-row input[type="email"],
+.form-row input[type="password"],
+.form-row input[type="tel"],
+.form-row select {
+    flex: 1; /* Take up the remaining space */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/* For smaller devices (phones, tablets in portrait mode, etc.) */
+@media only screen and (max-width: 599px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("Signup_background_img_phone.webp");
+        overflow: hidden;
+    }
+}
+
+/* For larger devices (tablets in landscape mode, desktops, etc.) */
+@media only screen and (min-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("Signup_background_img.webp");
+        overflow: hidden;
+    }
+}
+
+a{
+    margin-left: 10%;
+}

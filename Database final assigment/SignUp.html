@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Css/SignUp.css">
+    <link rel="stylesheet" type="text/css" href="LogSign.css">
+    <title>SignUp Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body>
+    <div class="form-container">
+        <form action="SignUp.php" method="post" id="signup-form">
+            <h2>Sign Up</h2>
+            <div class="form-row">
+            <div class="role-container">
+            <label for="role">Role:</label>
+                <select name="role" id="role" onchange="updateFormFields()">
+                    <option value="client">Client</option>
+                   <option value="sitter">Sitter</option>
+                    <option value="handler">Handler</option>
+                </select>
+            </div>
+            </div>
+
+            <div class="common-fields">
+                <div class="form-row">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                </div>
+            </div>
+
+            <div id="client-fields">
+
+                <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                </div>
+
+                <div class="form-row">
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname">
+                </div>
+               
+             
+          
+                <div class="form-row">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+                </div>
+             
+                <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                </div>
+            </div>
+
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <a href="LogIn.html">Log In</a>
+    </div>
+
+    <script>
+        function updateFormFields() {
+            var role = document.getElementById('role').value;
+            var clientFields = document.getElementById('client-fields');
+            
+            // Hide client-specific fields for sitters and handlers
+            if (role === 'sitter' || role === 'handler') {
+                clientFields.style.display = 'none';
+            } else {
+                clientFields.style.display = 'block';
+            }
+        }
+
+        // Initial call to set the correct form state on page load
+        updateFormFields();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+@media only screen and (max-width: 599px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("Signup_background_img_phone.webp");
+        overflow: hidden;
+    }
+}
+
+/* For larger devices (tablets in landscape mode, desktops, etc.) */
+@media only screen and (min-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: url("Signup_background_img.webp");
+        overflow: hidden;
+    }
+}
